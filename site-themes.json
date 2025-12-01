@@ -48,6 +48,25 @@
       "customStyles": {
         "body": {
           "paddingTop": "0"
+        },
+        "#moodesk-sso-login-btn": {
+          "background": "linear-gradient(135deg, #0066b3, #00a8e8)",
+          "color": "white",
+          "border": "none",
+          "padding": "6px 16px",
+          "borderRadius": "20px",
+          "cursor": "pointer",
+          "fontSize": "13px",
+          "fontWeight": "500",
+          "display": "flex",
+          "alignItems": "center",
+          "gap": "6px",
+          "transition": "all 0.2s ease",
+          "boxShadow": "0 2px 6px rgba(0, 102, 179, 0.3)"
+        },
+        "#moodesk-sso-login-btn:hover": {
+          "transform": "translateY(-1px)",
+          "boxShadow": "0 4px 12px rgba(0, 102, 179, 0.4)"
         }
       },
       "layoutAdjustments": {},
@@ -59,7 +78,25 @@
         "resourceManager": true,
         "assignmentTracker": true,
         "search": true
-      }
+      },
+      "injectElements": [
+        {
+          "id": "moodesk-sso-login-btn",
+          "target": ".top-right",
+          "position": "prepend",
+          "condition": {
+            "path": "/"
+          },
+          "html": "<li style='display: flex; align-items: center; margin-right: 15px;'><button id='moodesk-sso-login-btn' title='Moodesk SSO 登录'><svg width='14' height='14' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2'><path d='M15 3h4a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2h-4'/><polyline points='10 17 15 12 10 7'/><line x1='15' y1='12' x2='3' y2='12'/></svg>SSO Login</button></li>",
+          "events": {
+            "click": {
+              "action": "call",
+              "module": "moodeskAuthModule",
+              "method": "triggerSsoLogin"
+            }
+          }
+        }
+      ]
     },
     
     "cbet.ukm.my": {
