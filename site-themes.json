@@ -43,14 +43,9 @@
         "navigation": "nav.navbar"
       },
       "hideElements": [
-      ".navbar",
-      "[role='banner']",
-      {
-        "selector": ".page-header",
-        "condition": { "path": "/course/" },
-        "style": "opacity: 0.3 !important;"
-      }
-    ],
+        "#page-header",
+        ".internalbanner"
+      ],
       "customStyles": {
         "body": {
           "paddingTop": "0"
