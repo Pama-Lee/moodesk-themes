@@ -43,8 +43,7 @@
         "navigation": "nav.navbar"
       },
       "hideElements": [
-        "#page-header",
-        ".internalbanner"
+        "#page-header"
       ],
       "customStyles": {
         "body": {
