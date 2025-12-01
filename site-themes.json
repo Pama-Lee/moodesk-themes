@@ -49,24 +49,12 @@
         "body": {
           "paddingTop": "0"
         },
-        "#moodesk-sso-login-btn": {
-          "background": "linear-gradient(135deg, #0066b3, #00a8e8)",
-          "color": "white",
-          "border": "none",
-          "padding": "6px 16px",
-          "borderRadius": "20px",
-          "cursor": "pointer",
-          "fontSize": "13px",
-          "fontWeight": "500",
-          "display": "flex",
-          "alignItems": "center",
-          "gap": "6px",
-          "transition": "all 0.2s ease",
-          "boxShadow": "0 2px 6px rgba(0, 102, 179, 0.3)"
+        "#moodesk-sso-fab:hover": {
+          "transform": "scale(1.1)",
+          "boxShadow": "0 6px 20px rgba(0, 102, 179, 0.5)"
         },
-        "#moodesk-sso-login-btn:hover": {
-          "transform": "translateY(-1px)",
-          "boxShadow": "0 4px 12px rgba(0, 102, 179, 0.4)"
+        "#moodesk-sso-fab:active": {
+          "transform": "scale(0.95)"
         }
       },
       "layoutAdjustments": {},
@@ -81,14 +69,10 @@
       },
       "injectElements": [
         {
-          "id": "moodesk-sso-login-li",
-          "target": ".navbar-nav.navigation.main-menu",
+          "id": "moodesk-sso-fab",
+          "target": "body",
           "position": "append",
-          "condition": {
-            "path": "/"
-          },
-          "html": "<li class='moodesk-nav-item'><a id='moodesk-sso-login-btn' href='#' class='dropdown-item' style='display: flex; align-items: center; gap: 6px; background: linear-gradient(135deg, #0066b3, #00a8e8); color: white !important; border-radius: 20px; padding: 8px 16px; margin: 0 10px; font-weight: 500; transition: all 0.2s ease; box-shadow: 0 2px 6px rgba(0, 102, 179, 0.3);'><svg width='14' height='14' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2'><path d='M15 3h4a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2h-4'/><polyline points='10 17 15 12 10 7'/><line x1='15' y1='12' x2='3' y2='12'/></svg>SSO Login</a></li>",
-          "eventTarget": "#moodesk-sso-login-btn",
+          "html": "<button id='moodesk-sso-fab' title='Moodesk SSO 登录' style='position: fixed; bottom: 30px; right: 30px; width: 56px; height: 56px; border-radius: 50%; background: linear-gradient(135deg, #0066b3, #00a8e8); color: white; border: none; cursor: pointer; display: flex; align-items: center; justify-content: center; box-shadow: 0 4px 12px rgba(0, 102, 179, 0.4); z-index: 9999; transition: all 0.3s ease;'><svg width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2'><path d='M15 3h4a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2h-4'/><polyline points='10 17 15 12 10 7'/><line x1='15' y1='12' x2='3' y2='12'/></svg></button>",
           "events": {
             "click": {
               "action": "call",
